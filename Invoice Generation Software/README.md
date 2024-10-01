@@ -28,20 +28,20 @@ Grand Total  : 78.30
 
 ## Example Code
 #java
-// Create individual taxes
+// Create individual taxes...
 Tax vat = new Tax("VAT", 2);
 Tax sgst = new Tax("SGST", 1);
 Tax cgst = new Tax("CGST", 1);
 
-// Create tax groups
+// Create tax groups....
 TaxGroup noTax = new TaxGroup(Arrays.asList());
 TaxGroup vatOnly = new TaxGroup(Arrays.asList(vat));
 TaxGroup sgstCgst = new TaxGroup(Arrays.asList(sgst, cgst));
 
-// Create products
+// Create products....
 Product soap = new Product("Soap", 10, sgstCgst);
 Product petrol = new Product("Petrol", 65, vatOnly);
 
-// Create invoice and generate output
+// Create invoice and generate output....
 Invoice invoice = new Invoice(Arrays.asList(soap, petrol));
 invoice.generateInvoice();
